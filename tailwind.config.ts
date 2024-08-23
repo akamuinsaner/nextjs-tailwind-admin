@@ -33,7 +33,7 @@ const config: Config = {
             },
             backgroundColor: {
                 primary: '#fff',
-                'primary-inverted': '#0a0a0a',
+                'primary-invert': '#0a0a0a',
                 'primary-hover': '#fafafa',
                 secondary: '#e5e7eb',
                 'secondary-hover': '#d1d5db',

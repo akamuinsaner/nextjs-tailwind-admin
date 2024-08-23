@@ -2,13 +2,13 @@ import createWrapperAndAppendToBody from '@/app/utils/createWrapperAndAppendToBo
 import { useEffect, useState } from 'react';
 
 const useWrapper = ({
-    close,
     wrapperId = 'wrapper-id',
     open,
+    close,
 }: {
-    close: () => void;
     wrapperId: string;
     open: boolean;
+    close: () => void;
 }) => {
     const [wrapper, setWrapper] = useState<HTMLDivElement | null>(null);
 

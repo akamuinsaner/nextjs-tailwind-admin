@@ -15,6 +15,7 @@
         "component:headless": "cypress run --component"
     },
     "dependencies": {
+        "@remixicon/react": "^4.2.0",
         "classnames": "^2.5.1",
         "next": "14.2.6",
         "react": "^18",
