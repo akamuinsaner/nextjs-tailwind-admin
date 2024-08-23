@@ -1,29 +1,19 @@
 import { ReactElement, cloneElement, forwardRef, memo, useMemo } from 'react';
-import { TButton } from './types';
+import { TLink } from './types';
 import { twMerge } from 'tailwind-merge';
 import classNames from 'classnames';
 import { styles } from './styles';
 
-const Button = forwardRef<HTMLButtonElement, TButton>(
+const Link = forwardRef<HTMLAnchorElement, TLink>(
     (
-        {
-            size = 'md',
-            variant = 'primary',
-            children,
-            type,
-            className,
-            prefix,
-            suffix,
-            ...props
-        },
+        { size = 'md', children, type, className, prefix, suffix, ...props },
         ref,
     ) => {
         const classes = twMerge(
-            styles.base,
+            styles.link.base,
             classNames({
-                [styles.button.size[size]]: !!size,
-                [styles.varaint[variant]]: !!variant,
-                [styles.disabled]: props.disabled,
+                [styles.link.size[size]]: !!size,
+                [styles.link.disabled]: props.disabled,
             }),
             className,
         );
@@ -45,13 +35,19 @@ const Button = forwardRef<HTMLButtonElement, TButton>(
         }, [suffix]);
 
         return (
-            <button ref={ref} className={classes} {...props}>
+            <a
+                role='button'
+                tabIndex={0}
+                ref={ref}
+                className={classes}
+                {...props}
+            >
                 {addOnBefore}
                 {children}
                 {addOnAfter}
-            </button>
+            </a>
         );
     },
 );
 
-export default Button;
+export default Link;
