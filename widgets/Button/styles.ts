@@ -2,11 +2,11 @@ export const styles = {
     base: 'flex items-center outline-none bg-transparent border-none rounded shadow font-medium',
     varaint: {
         primary:
-            'text-primary-invert bg-brand-primary hover:bg-brand-primary-emphasize focus:bg-brand-primary-emphasize focus:ring-4 focus:ring-focus/[.12]',
+            'text-primary-invert bg-brand-primary hover:bg-brand-primary-emphasize focus:bg-brand-primary-emphasize focus:ring-4 focus:ring-brand-solid/[.12]',
         secondary:
-            'text-primary bg-primary border-primary hover:bg-primary-hover focus:bg-primary-hover focus:ring-4 focus:ring-focus/[.12]',
+            'text-primary bg-primary border-primary hover:bg-primary-hover focus:bg-primary-hover focus:ring-4 focus:ring-brand-solid/[.12]',
         tertiary:
-            'shadow-none text-brand hover:bg-primary-hover focus:bg-primary-hover focus:ring-4 focus:ring-focus/[.12]',
+            'shadow-none text-brand hover:bg-primary-hover focus:bg-primary-hover focus:ring-4 focus:ring-brand-solid/[.12]',
         destructive:
             'text-primary-invert bg-error hover:bg-error-emphasize focus:bg-error-emphasize focus:ring-4 focus:ring-[#D92D20]/[.12]',
     },
@@ -33,7 +33,7 @@ export const styles = {
         },
     },
     link: {
-        base: 'text-secondary hover:text-primary focus:text-primary focus:ring-4 focus:ring-focus/[.12] font-medium rounded outline-none',
+        base: 'text-secondary hover:text-primary focus:text-primary focus:ring-4 focus:ring-brand-solid/[.12] font-medium rounded outline-none',
         size: {
             sm: 'text-sm',
             md: 'text-base',

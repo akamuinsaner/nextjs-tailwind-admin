@@ -10,12 +10,16 @@ export const NAVCONFIG: INavConfig[] = [
         name: 'Components',
         children: [
             {
+                key: 'badge',
+                name: 'Badge',
+            },
+            {
                 key: 'button',
                 name: 'Button',
             },
             {
-                key: 'link',
-                name: 'Link',
+                key: 'input',
+                name: 'Input',
             },
         ],
     },
