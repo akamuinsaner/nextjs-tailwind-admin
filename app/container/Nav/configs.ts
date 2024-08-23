@@ -18,6 +18,10 @@ export const NAVCONFIG: INavConfig[] = [
                 name: 'Button',
             },
             {
+                key: 'checkbox',
+                name: 'Checkbox',
+            },
+            {
                 key: 'input',
                 name: 'Input',
             },
