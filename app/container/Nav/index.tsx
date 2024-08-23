@@ -1,8 +1,18 @@
-import { useCallback } from 'react';
+'use client';
+import { MouseEventHandler, useCallback } from 'react';
 import { NAVCONFIG } from './configs';
 import { INavConfig } from './types';
 
 const Nav = () => {
+    const onItemClick = useCallback((nav: INavConfig) => {
+        const handler: MouseEventHandler<HTMLAnchorElement> = e => {
+            const hasChildren = nav?.children && nav.children.length;
+            if (!hasChildren) return;
+            e.preventDefault();
+        };
+        return handler;
+    }, []);
+
     const renderNav = useCallback(
         (
             list: INavConfig[] = [],
@@ -21,6 +31,7 @@ const Nav = () => {
                                     style={{
                                         paddingLeft: `${6 * (depth + 1)}px`,
                                     }}
+                                    onClick={onItemClick(nav)}
                                 >
                                     {nav.name}
                                 </a>

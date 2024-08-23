@@ -1,6 +1,6 @@
-import Button from '@/app/widgets/Button';
-import IconButton from '@/app/widgets/Button/IconButton';
-import Link from '@/app/widgets/Button/Link';
+import Button from '@/widgets/Button';
+import IconButton from '@/widgets/Button/IconButton';
+import Link from '@/widgets/Button/Link';
 import { RiMenuLine } from '@remixicon/react';
 
 const ButtonPage = () => {

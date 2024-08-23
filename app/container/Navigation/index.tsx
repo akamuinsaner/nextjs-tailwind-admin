@@ -1,8 +1,8 @@
 'use client';
-import NavBar from '@/app/widgets/NavBar';
+import NavBar from '@/widgets/NavBar';
 import Logo from './Logo';
 import { RiMenuLine } from '@remixicon/react';
-import Drawer from '@/app/widgets/Drawer';
+import Drawer from '@/widgets/Drawer';
 import SideBar from '../SideBar';
 import { useState } from 'react';
 
